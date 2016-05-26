@@ -16,7 +16,11 @@ router.get('/', function(req, res){
 });
 
 app.use(router);
-
-app.listen(3030, function(){
-	console.log("Express server running on port 3030");
+mongoose.connect('mongodb://localhost/tvseries', function(err,res){
+	if (err) {
+		console.log('ERROR: connecting to Database. ' + err);
+	}
+	app.listen(3030, function(){
+		console.log("Express server running on port 3030");
+	});
 });
