@@ -1,5 +1,8 @@
+//Requiring Modules
 var mongoose = require('mongoose');
 	Schema = mongoose.Schema;
+
+//Defining Schema
 
 var tvseries = new Schema({
 	title: {type: String},
@@ -11,5 +14,7 @@ var tvseries = new Schema({
 	},
 	sinopsis: {type:String}
 });
+
+//Exporting Module
 
 module.exports = mongoose.model('TvSeries', tvseries);
