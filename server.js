@@ -31,11 +31,10 @@ var tvseries = express.Router();
 app.use('/api', tvseries);
 
 //Connect to DB
-mongoose.connect('mongodb://localhost/tvseries', function(err,res){
+mongoose.connect('mongodb://localhost/api/tvseries', function(err,res){
 	if (err) {
-		console.log('ERROR: connecting to Database. ' + err);
+		console.log('ERROR: connecting to Database ' + err);
 	}
-
 	//Server listening.
 	app.listen(3030, function(){
 		console.log("Express server running on port 3030");
